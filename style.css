@@ -71,6 +71,9 @@ body {
     width: 100%;
     background-color: #2d303a;
     border-bottom: solid 6px #323746;
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }
 
 .header_content {
@@ -273,7 +276,7 @@ body {
 }
 
 .services__elem h3 {
-    font-family: "Lato Black";
+    font-family: "Lato Black", serif;
     font-size: 18px;
     font-weight: 400;
     color: #666d89;
@@ -369,20 +372,27 @@ p {
 }
 
 .tag {
-  border-radius: 5px;
-  border: 1px solid #666d89;
-  font-size: 12px;
-  line-height: 20px;
-  color: #767e9e;
-  font-weight: 400;
-  padding: 0 6px;
-  cursor: pointer;
-  word-spacing: -2px;
+    color: #6E7593;
+    background-color: #2D303A;
+    border: 1px solid #666D89;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 4px 6px 2px 6px;
+    margin-right: 7px;
+    font-family: 'Lato Bold', 'Arial', sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.15px;
+    outline: none;
 }
 
 .tag:hover {
-  border: 1px solid #dedede;
-  color: #dedede;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.tag_selected {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .portfolio__picture-example {
@@ -675,15 +685,16 @@ textarea {
   box-shadow: 0 7px 0 0 #ea676b;
   margin-bottom: 6px; }
   .contact-form__container {
-    padding: 63px 40px; }
+      padding: 37px 40px 19px;
+  }
   .contact-form__header {
-    font-family: 'Lato Black';
+      font-family: 'Lato Black', serif;
     font-size: 30px;
     letter-spacing: -0.2px;
     color: #f0d8d9;
     margin-bottom: 20px; }
   .contact-form__text {
-    font-family: 'Lato Light';
+      font-family: 'Lato Light', serif;
     font-size: 18px;
     letter-spacing: -0.21px;
     line-height: 31px;
@@ -693,7 +704,8 @@ textarea {
 
 .form-wrapper {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 .main-form {
   width: 640px; }
@@ -703,9 +715,9 @@ textarea {
     height: 38px;
     padding-left: 15px;
     margin-bottom: 16px;
-    font-family: 'Lato Regular';
+      font-family: 'Lato Regular', serif;
     font-size: 12px;
-    color: #f48c8f;
+    color: #FFFFFF;
     border-radius: 5px;
     border: none;
     box-sizing: border-box;
@@ -725,9 +737,9 @@ textarea {
     padding-left: 15px;
     padding-top: 10px;
     margin-bottom: 20px;
-    font-family: 'Lato Regular';
+      font-family: 'Lato Regular', serif;
     font-size: 12px;
-    color: #f48c8f;
+    color: #FFFFFF;
     border-radius: 5px;
     border: none;
     box-sizing: border-box;
@@ -743,7 +755,7 @@ textarea {
   .main-form__submit {
     height: 38px;
     padding: 5px 15px;
-    font-family: 'Lato Regular';
+      font-family: 'Lato Regular', serif;
     font-size: 12px;
     color: #f48c8f;
     border-radius: 5px;
@@ -831,3 +843,97 @@ textarea {
   opacity: 0.5;
   transition: 0.8s; }
 
+.navigation-elem a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a.navigation_active {
+    color: #F06C64 !important;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: auto;
+}
+.banner{
+    background-color: #F06C64;
+    border-bottom: 7px solid #EA676B;
+}
+
+.banner__block{
+    height: 593px;
+}
+
+.banner__items{
+    display: flex;
+    overflow: hidden;
+    width: 1020px;
+    height: 600px;
+}
+
+.banner__item {
+    flex-shrink: 0;
+    position: relative;
+    left: -1020px;
+    display: flex;
+    width: 1020px;
+}
+
+.banner__blackbox1{
+    position: absolute;
+    margin: 118px auto auto 125px;
+    height: 334px;
+    width: 189px;
+    background-color: #000000;
+    display: none;
+}
+
+.banner__blackbox2{
+    position: absolute;
+    margin: 187px auto auto 485px;
+    height: 189px;
+    width: 333px;
+    background-color: #000000;
+    display: none;
+}
+
+.banner__left-phone{
+    padding: 53px 0 0 112px;
+}
+
+.banner__right-phone{
+    padding: 174px 0 0 73px;
+}
+
+.banner__prev-arrow {
+    position: absolute;
+    margin: -319px auto auto 42px;
+    cursor: pointer;
+}
+
+.banner__next-arrow {
+    position: absolute;
+    margin: -319px auto auto 964px;
+    cursor: pointer;
+}
+.modal {
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal_hidden {
+    display: none;
+}
+
+.modal__content {
+    width: 400px;
+    margin: auto;
+    padding: 5px 20px 13px;
+    border-radius: 10px;
+    background: #fff;
+}

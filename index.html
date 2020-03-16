@@ -6,34 +6,52 @@
     <title>Singolo</title>
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="style.css">
-    
+    <script async src="./script.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="header_content">
-            <div class="logo"><h1><a href="singolo1.html" class="navigation-link">Singolo</a><span class="logo-star">*</span></h1>
+            <div class="logo"><h1><a style="color: #FFFFFF;text-decoration: none;" href="#">Singolo</a><span class="logo-star">*</span></h1>
             </div>
             <nav class="header__navigation">
-                <ul class="navigation">
-                    <li class="navigation-elem pixel-fix-4"><a href="singolo1.html" class="navigation-link">Home</a></li>
-                    <li class="navigation-elem"><a href="#services" class="navigation-link">Services</a></li>
-                    <li class="navigation-elem"><a class="navigation-link">Portfolio</a></li>
-                    <li class="navigation-elem"><a class="navigation-link">About</a></li>
-                    <li class="navigation-elem"><a class="navigation-link">Contact</a></li>
+                <ul class="navigation" id="menu">
+                    <li class="navigation-elem pixel-fix-4"><a href="#" class="navigation_active">Home</a></li>
+                    <li class="navigation-elem"><a href="#services" >Services</a></li>
+                    <li class="navigation-elem"><a href="#portfolio">Portfolio</a></li>
+                    <li class="navigation-elem"><a href="#about" >About</a></li>
+                    <li class="navigation-elem"><a href="#contact" >Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main id="main">
-        <div class="slider">
-            <div class="slider_content">
-                <img src="./assets/img/singolo1/vertical_mobile.png" class="vertical-mobile" alt="vertical_mobile">
-                <img src="./assets/img/singolo1/horizont_mobile.png" class="horizont-mobile" alt="horizont_mobile">
-                <div class="slider__buttons">
-                    <button class="prev-slide switch-button">
-                    </button>
-                    <button class="next-slide switch-button">
-                    </button>
+        <div class="banner">
+            <div class="wrapper">
+                <div class="banner__block">
+                    <div class="banner__items">
+                        <div class="banner__item">
+                            <img src="./assets/img/Slide-2.png" alt="Slide">
+                        </div>
+                        <div class="banner__item">
+                            <div class="banner__blackbox1" id="blackbox1"></div>
+                            <div class="banner__blackbox2" id="blackbox2"></div>
+                            <div class="banner__left-phone">
+                                <img src="./assets/img/singolo1/vertical_mobile.png" id="Phone1" alt="iPhone Vertical">
+                            </div>
+                            <div class="banner__right-phone">
+                                <img src="./assets/img/singolo1/horizont_mobile.png" id="Phone2" alt="iPhone Horizontal">
+                            </div>
+                        </div>
+                        <div class="banner__item">
+                            <img src="./assets/img/Slide-2.png" alt="Slide">
+                        </div>
+                    </div>
+                    <div class="banner__prev-arrow">
+                        <img src="./assets/img/prev.png" alt="Prev">
+                    </div>
+                    <div class="banner__next-arrow">
+                        <img src="./assets/img/next.png" alt="Next">
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,35 +117,35 @@
         </div>
     </main>
     <main>
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="portfolio_content">
                 <div class="portfolio__description">
                     <h2>Portfolio</h2>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                    <div class="portfolio__tags">
-                        <span class="tag">All</span>
-                        <span class="tag">Web Design</span>
-                        <span class="tag">Graphic Design</span>
-                        <span class="tag">Artwork</span>
+                    <div class="portfolio__tags" id="tags">
+                        <button class="tag tag_selected" id="tag-all">All</button>
+                        <button class="tag" id="tag-web">Web Design</button>
+                        <button class="tag" id="tag-graphic">Graphic Design</button>
+                        <button class="tag" id="tag-art">Artwork</button>
                     </div>
                 </div>
-                <div class="portfolio__picture-example">
-                    <div class="picture"><img src="assets/img/singolo2/1.png" alt="1" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/2.png" alt="2" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/3.png" alt="3" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/4.png" alt="4" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/5.png" alt="5" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/6.png" alt="6" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/7.png" alt="7" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/8.png" alt="8" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/9.png" alt="9" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/10.png" alt="10" height="187px" width="220px" ></div>
-                    <div class="picture"><img src="assets/img/singolo2/11.png" alt="11" height="187px" width="220px"></div>
-                    <div class="picture"><img src="assets/img/singolo2/12.png" alt="12" height="187px" width="220px"></div>
+                <div class="portfolio__picture-example" id="portfolio-img">
+                    <article  class="picture"><img src="assets/img/singolo2/1.png" class="portfolio__image" alt="1" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/2.png" class="portfolio__image" alt="2" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/3.png" class="portfolio__image" alt="3" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/4.png" class="portfolio__image" alt="4" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/5.png" class="portfolio__image" alt="5" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/6.png" class="portfolio__image" alt="6" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/7.png" class="portfolio__image" alt="7" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/8.png" class="portfolio__image" alt="8" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/9.png" class="portfolio__image" alt="9" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/10.png" class="portfolio__image" alt="10" height="187" width="220" ></article >
+                    <article  class="picture"><img src="assets/img/singolo2/11.png" class="portfolio__image" alt="11" height="187" width="220"></article >
+                    <article  class="picture"><img src="assets/img/singolo2/12.png" class="portfolio__image" alt="12" height="187" width="220"></article >
                 </div>
             </div>
         </div>
-        <div class="about-us">
+        <div class="about-us" id="about">
             <div class="about-us_content">
                 <div class="about-us__description">
                     <h2>About Us</h2>
@@ -171,18 +189,30 @@
             </div>
         </div>
     </main>
-    <section class="contact-form">
+    <section class="contact-form" id="contact">
         <div class="contact-form__container container">
             <h2 class="contact-form__header">Get a Quote</h2>
             <p class="contact-form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="form-wrapper">
-                <form action="#" method="GET" class="main-form">
-                    <input class="main-form__input" name ="name" type="text" placeholder="Name (Required)" required pattern ="^[a-zA-Z]+$">
-                    <input class="main-form__input" name = "email" type="email" placeholder="Email (Required)" required>
-                    <input class="main-form__input" name = "subject" type="text" placeholder="Subject" maxlength="25">
-                    <textarea  class="main-form__textarea" name="text" placeholder="Describe your project in detail..."></textarea>
-                    <button class="main-form__submit" type="submit">Submit</button>
+            <div class="form-wrapper" >
+                <form action method="GET" id="form">
+                    <p><input class="main-form__input" type="name" name="name" required placeholder="Name (Required)"></p>
+                    <p><input class="main-form__input" type="email" name="email" required placeholder="Email (Required)"></p>
+                    <p><input class="main-form__input" type="text" name="subject" placeholder="Subject"></p>
+                   <textarea class="main-form__textarea" name="question" placeholder="Describe your project in detail..."></textarea>
+                    <div class="contact__button">
+                        <button class="main-form__submit" onclick="change()">Submit</button>
+                    </div>
                 </form>
+
+                <div class="modal modal_hidden" id="modal">
+                    <div class="modal__content">
+                        <div class="modal__close"></div>
+                        <p class="modal__text">Письмо отправлено</p>
+                        <p class="modal__text">Тема: </p>
+                        <p class="modal__text">Описание: </p>
+                        <button class="modal__button">OK</button>
+                    </div>
+                </div>
                 <div class="contact-inf">
                     <h3 class="contact-inf__header">Contact Information</h3>
                     <p class="contact-inf__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
@@ -191,8 +221,9 @@
                     <a class="contact-inf__link" href="mailto:info@singolo.com">info@singolo.com</a>
                 </div>
             </div>
-        </div>     
+        </div>
     </section>
+
     <footer class="footer">
         <div class="footer__container container">
             <a href="#"><span>&#169;</span>Copyright 2013</a>
