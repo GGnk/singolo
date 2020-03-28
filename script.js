@@ -245,4 +245,6 @@ MODAL.addEventListener('click', (event) =>{
     }
 });
 
+
+
 showMobileMenu();
