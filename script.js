@@ -5,6 +5,53 @@ const PORT_IMG = document.getElementById('portfolio-img');
 const FORM = document.getElementById('form');
 const MODAL = document.getElementById('modal');
 
+function showMobileMenu() {
+    const mobileMenuEnter = document.querySelector('.enter-mobile-menu');
+    const mobileMenuExit = document.querySelector('.exit-mobile-menu');
+    const mobileMenuScreen = document.querySelector('.screen-mobile-menu');
+    const mobileMenuNavigation = document.getElementById('mobile-navigation');
+    const mobileLogo = document.getElementById('mini-logo');
+  
+    mobileMenuEnter.addEventListener('click', () => {
+      document.querySelector('.screen-mobile-menu').classList.remove('hide-mm');
+      document.querySelector('.window-mobile-menu').classList.remove('throw-mm');
+      document.querySelector('.enter-mobile-menu').classList.add('icon-rotate');
+      document.querySelector('.mobile-menu').classList.add('icon-rotate');
+    });
+  
+    mobileMenuExit.addEventListener('click', () => {
+      document.querySelector('.screen-mobile-menu').classList.add('hide-mm');
+      document.querySelector('.window-mobile-menu').classList.add('throw-mm');
+      document.querySelector('.mobile-menu').classList.remove('icon-rotate');
+      document.querySelector('.enter-mobile-menu').classList.remove('icon-rotate');
+    });
+  
+    mobileMenuNavigation.addEventListener('click', () => {
+      if (event.target.tagName == 'A') {
+        document.querySelector('.screen-mobile-menu').classList.add('hide-mm');
+        document.querySelector('.window-mobile-menu').classList.add('throw-mm');
+        document.querySelector('.mobile-menu').classList.remove('icon-rotate');
+        document.querySelector('.enter-mobile-menu').classList.remove('icon-rotate');
+      }
+    });
+  
+    mobileMenuScreen.addEventListener('click', () => {
+      document.querySelector('.screen-mobile-menu').classList.add('hide-mm');
+      document.querySelector('.window-mobile-menu').classList.add('throw-mm');
+      document.querySelector('.mobile-menu').classList.remove('icon-rotate');
+      document.querySelector('.enter-mobile-menu').classList.remove('icon-rotate');
+    });
+  
+    mobileLogo.addEventListener('click', () => {
+      if (event.target.tagName == 'A') {
+        document.querySelector('.screen-mobile-menu').classList.add('hide-mm');
+        document.querySelector('.window-mobile-menu').classList.add('throw-mm');
+        document.querySelector('.mobile-menu').classList.remove('icon-rotate');
+        document.querySelector('.enter-mobile-menu').classList.remove('icon-rotate');
+      }
+    });
+  }
+  
 //Menu
 MENU.addEventListener('click', (event) =>{
     MENU.querySelectorAll('a').forEach(el => el.classList.remove('navigation_active'));
@@ -41,14 +88,14 @@ blackbox2.onclick = function() {
 //Banner
 document.querySelector('.banner__next-arrow').onclick = function(){
     let banner_item=document.querySelector('.banner__items');
-    if(banner_item.children[0].style.left==='-1020px'||banner_item.children[0].style.left===''){
-        let counter = -1020;
+    if(banner_item.children[0].style.left==='-100%'||banner_item.children[0].style.left===''){
+        let counter = -100;
         let interval = setInterval(() => {
-            counter-=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="-2040px"){
+            counter-=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="-200%"){
                 clearInterval(interval);
                 return;
             }
@@ -56,14 +103,14 @@ document.querySelector('.banner__next-arrow').onclick = function(){
         document.querySelector('.banner').style.backgroundColor='#648BF0';
         document.querySelector('.banner').style.borderBottom='7px solid #648BF0';
     }
-    else if(banner_item.children[0].style.left==='-2040px'){
+    else if(banner_item.children[0].style.left==='-200%'){
         let counter = 0;
         let interval = setInterval(() => {
-            counter-=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="-1020px"){
+            counter-=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="-100%"){
                 clearInterval(interval);
                 return;
             }
@@ -74,11 +121,11 @@ document.querySelector('.banner__next-arrow').onclick = function(){
     else if(banner_item.children[0].style.left==='0px'){
         let counter = 0;
         let interval = setInterval(() => {
-            counter-=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="-1020px"){
+            counter-=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="-100%"){
                 clearInterval(interval);
                 return;
             }
@@ -90,14 +137,14 @@ document.querySelector('.banner__next-arrow').onclick = function(){
 
 document.querySelector('.banner__prev-arrow').onclick = function(){
     let banner_item=document.querySelector('.banner__items');
-    if(banner_item.children[0].style.left==='-1020px'||banner_item.children[0].style.left===''){
-        let counter = -1020;
+    if(banner_item.children[0].style.left==='-100%'||banner_item.children[0].style.left===''){
+        let counter = -100;
         let interval = setInterval(() => {
-            counter+=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="0px"){
+            counter+=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="0"){
                 clearInterval(interval);
                 return;
             }
@@ -105,14 +152,14 @@ document.querySelector('.banner__prev-arrow').onclick = function(){
         document.querySelector('.banner').style.backgroundColor='#648BF0';
         document.querySelector('.banner').style.borderBottom='7px solid #648BF0';
     }
-    else if(banner_item.children[0].style.left==='-2040px'){
-        let counter = -2040;
+    else if(banner_item.children[0].style.left==='-200%'){
+        let counter = -200;
         let interval = setInterval(() => {
-            counter+=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="-1020px"){
+            counter+=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="-100%"){
                 clearInterval(interval);
                 return;
             }
@@ -120,14 +167,14 @@ document.querySelector('.banner__prev-arrow').onclick = function(){
         document.querySelector('.banner').style.backgroundColor='#F06C64';
         document.querySelector('.banner').style.borderBottom='7px solid #EA676B';
     }
-    else if(banner_item.children[0].style.left==='0px'){
-        let counter = -2040;
+    else if(banner_item.children[0].style.left==='0'){
+        let counter = -200;
         let interval = setInterval(() => {
-            counter+=4;
-            banner_item.children[0].style.left=`${counter}px`;
-            banner_item.children[1].style.left=`${counter}px`;
-            banner_item.children[2].style.left=`${counter}px`;
-            if(banner_item.children[0].style.left==="-1020px"){
+            counter+=1;
+            banner_item.children[0].style.left=`${counter}%`;
+            banner_item.children[1].style.left=`${counter}%`;
+            banner_item.children[2].style.left=`${counter}%`;
+            if(banner_item.children[0].style.left==="-100%"){
                 clearInterval(interval);
                 return;
             }
@@ -196,3 +243,5 @@ MODAL.addEventListener('click', (event) =>{
         FORM.querySelector("textarea").value='';
     }
 });
+
+showMobileMenu();
