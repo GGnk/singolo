@@ -1,1 +1,1 @@
-# singolo
+https://ggnk.github.io/singolo
