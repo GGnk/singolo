@@ -184,6 +184,7 @@ document.querySelector('.banner__prev-arrow').onclick = function(){
     }
 }
 
+
 //Tags on portfolio
 TAGS.addEventListener('click', (event)=>{
     if(event.target.tagName==='BUTTON'){
